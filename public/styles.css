@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+canvas {
+    width: 80% !important;
+    max-width: 800px;
+    height: 400px !important;
+}
