@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualización de Datos de Alpha Vantage</title>
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <main>
-    
-        <h1>International Business Machines Corporation</h1>
-        <p>Cotización de Acciones</p>
 
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="Logo">
+                <img class="Logo" src="descarga.png" width="150" height="50" alt="Forma del Logo">
+            </a>
+            <input type="checkbox" name="" id="menu">
+            <label for="menu">
+                <img src="menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="titulo">
+            <h1>International Business Machines Corporation</h1>
+            <p>Cotización de Acciones</p>
+        </div>
         <hr>
-    <canvas id="myChart" width="400" height="200"></canvas>
+        <section class="cols-2">
+            <figure>
+                <h2>Reseña:</h2>
+                <p>International Business Machines Corporation (<strong>IBM</strong>) (NYSE: <a
+                        href="https://www.nyse.com/quote/XNYS:IBM" title="IBM">IBM</a>) es una empresa tecnológica
+                    multinacional estadounidense con sede en Armonk, Nueva York. IBM fabrica y comercializa hardware y
+                    software para computadoras, y ofrece servicios de infraestructura, alojamiento de Internet, y
+                    consultoría en una amplia gama de áreas relacionadas con la informática, desde computadoras
+                    centrales hasta nanotecnología.<br>
+                    ​
+                    La empresa fue fundada en 1911 como Computing Tabulating Recording Corporation, el resultado de la
+                    fusión de cuatro empresas: Tabulating Machine Company, International Time Recording Company,
+                    Computing Scale Corporation, y Bundy Manufacturing Company. CTR adoptó el nombre International
+                    Business Machines en 1924, utilizando un nombre previamente designado a una filial de CTR en Canadá,
+                    y posteriormente en América del Sur.<br>
+                    En 2011, la revista Fortune clasificó a <strong>IBM</strong> como la empresa número 18 en los Estados Unidos en tamaño, y la empresa número 7 en beneficios.​ Globalmente, la empresa fue clasificada como la empresa número 31 en tamaño por Forbes en 2011.​ Por el número de empleados (más de 425.000) es la segunda empresa más grande del mundo, superada solamente por Walmart (en más de 200 países, con ocupaciones incluyendo científicos, ingenieros, consultores y profesionales de ventas).
+                
+                </p>
+            </figure>
+            <figure>
+                <h2>Gráfico Bursátil</h2>
+                <canvas id="myChart"></canvas>
+            </figure>
+
+
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@ async function fetchData() {
     try {
         const response = await fetch('/data');
         const data = await response.json();
-
+        console.log(data);
         const timeSeries = data['Time Series (5min)'];
         const labels = Object.keys(timeSeries).reverse(); 
         const values = labels.map(label => parseFloat(timeSeries[label]['4. close'])); 
@@ -13,9 +13,11 @@ async function fetchData() {
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'IBM - Precio de Cierre',
+                    label: 'IBM - Quote',
                     data: values,
                     borderColor: 'blue',
+                    backgroundColor: '#00aae4',
+                    pointBackgroundColor: '#00aae4',
                     fill: false
                 }]
             },
